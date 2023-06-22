@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* El tamaño total de la caja incluye bordes y relleno */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    font-size: 16px;
+    padding: 10px;
+    background-image:url("../resources/newAccount.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    /*background: #FFFFFF;*/
+    padding: 25px 30px;
+    border-radius: 1em;
+    background: linear-gradient(to right,#d7e7ff,#f2d8ff);
+    box-shadow: 0 10px 15px rgb(53, 7, 93);
+}
+
+.container .title {
+    font-size: 35px;
+    color: #202020;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(to right,#58b9ff,#aa12f5);
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+form .user-details .input-box {
+    margin: 5px 0 10px 0;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    background: transparent;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #ffffff;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+form button{
+   height: 40px;
+   width: 100%;
+   outline: none;
+   border: none;
+   color: #FFFFFF;
+   cursor: pointer;
+   border-radius: 1em;
+   font-size: 18px;
+   background: linear-gradient(to right,#66c1f6,#c259f6);
+}
+
+form button:hover {
+    background: linear-gradient(to right,#c259f6,#66c1f6);
+}
+
+.backToLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+  
+.backToLogin span {
+    margin-right: 10px;
+}
+
+@media (max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .container form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar {
+        width: 0;
+    }
+}
